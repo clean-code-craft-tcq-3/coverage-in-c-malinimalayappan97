@@ -14,27 +14,17 @@ BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
   return NORMAL;
 }
 
-BreachType classifyTemperatureBreach(
-    CoolingType coolingType, double temperatureInC) {
+BreachType classifyTemperatureBreach(CoolingType coolingType, double temperatureInC) 
+{
   int lowerLimit = 0;
   int upperLimit = 0;
   
   lowerLimit = TempBreachLimit[(int)coolingType][0];
   upperLimit = TempBreachLimit[(int)coolingType][1];
-//   switch(coolingType) {
-//     case PASSIVE_COOLING:
-//       lowerLimit = 0;
-//       upperLimit = 35;
-//       break;
-//     case HI_ACTIVE_COOLING:
-//       lowerLimit = 0;
-//       upperLimit = 45;
-//       break;
-//     default:
-//       lowerLimit = 0;
-//       upperLimit = 40;
-//       break;
-//   }
+  
+   printf("Lowerlimit: %d\n", lowerLimit);
+   printf("upperLimit: %d\n", upperLimit);
+
   return inferBreach(temperatureInC, lowerLimit, upperLimit);
 }
 
