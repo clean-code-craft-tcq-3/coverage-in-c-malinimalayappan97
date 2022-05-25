@@ -28,5 +28,6 @@ TEST_CASE("check and alert based on temp range") {
 
  checkAndAlert(TO_CONTROLLER,batteryChar, -1); 
  checkAndAlert(TO_EMAIL,batteryChar ,-1); 
+}
 
 
