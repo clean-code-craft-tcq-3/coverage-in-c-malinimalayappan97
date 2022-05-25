@@ -26,7 +26,7 @@ TEST_CASE("check and alert based on temp range") {
   
   batteryChar.coolingType = PASSIVE_COOLING;
 
-  REQUIRE(checkAndAlert(TO_CONTROLLER,batteryChar, -1)== TOO_LOW); 
-  REQUIRE(checkAndAlert(TO_EMAIL,batteryChar ,-1)== TOO_LOW); 
+  REQUIRE(checkAndAlert(TO_CONTROLLER,batteryChar, -1)); 
+  REQUIRE(checkAndAlert(TO_EMAIL,batteryChar ,-1)); 
 
 
