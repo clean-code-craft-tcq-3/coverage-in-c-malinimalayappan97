@@ -21,9 +21,6 @@ BreachType classifyTemperatureBreach(CoolingType coolingType, double temperature
   
   lowerLimit = TempBreachLimit[(int)coolingType][0];
   upperLimit = TempBreachLimit[(int)coolingType][1];
-  
-   printf("Lowerlimit: %d\n", lowerLimit);
-   printf("upperLimit: %d\n", upperLimit);
 
   return inferBreach(temperatureInC, lowerLimit, upperLimit);
 }
