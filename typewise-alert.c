@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 
-uint8 TempBreachLimit[3][2] ={{0,35},{0,40},{0,45}};
+int8 TempBreachLimit[3][2] ={{0,35},{0,40},{0,45}};
 
 BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
   if(value < lowerLimit) {
@@ -19,8 +19,8 @@ BreachType classifyTemperatureBreach(
   int lowerLimit = 0;
   int upperLimit = 0;
   
-  lowerLimit = TempBreachLimit[(uint8)coolingType][0];
-  upperLimit = TempBreachLimit[(uint8)coolingType][1];
+  lowerLimit = TempBreachLimit[(int8)coolingType][0];
+  upperLimit = TempBreachLimit[(int8)coolingType][1];
 //   switch(coolingType) {
 //     case PASSIVE_COOLING:
 //       lowerLimit = 0;
