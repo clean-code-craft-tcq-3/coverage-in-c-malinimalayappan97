@@ -27,7 +27,14 @@ TEST_CASE("check and alert based on temp range") {
   batteryChar.coolingType = PASSIVE_COOLING;
 
  checkAndAlert(TO_CONTROLLER,batteryChar, -1); 
- checkAndAlert(TO_EMAIL,batteryChar ,-1); 
+ checkAndAlert(TO_EMAIL,batteryChar ,10); 
+ checkAndAlert(NO_ALERT,batteryChar ,34); 
+}
+
+TEST_CASE("check breach type") {
+   sendToEmail(TOO_LOW); 
+   sendToEmail(NORMAL); 
+   sendToEmail(TOO_HIGH); 
 }
 
 
