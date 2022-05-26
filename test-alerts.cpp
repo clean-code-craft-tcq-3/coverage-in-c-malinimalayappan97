@@ -25,14 +25,14 @@ TEST_CASE("check and alert based on temp range") {
   BatteryCharacter batteryChar ={PASSIVE_COOLING,{0}};
   
   batteryChar.coolingType = PASSIVE_COOLING;
-/* check if printf is called -yet to add*/
+
  checkAndAlert(TO_CONTROLLER,batteryChar, -1); 
  checkAndAlert(TO_EMAIL,batteryChar ,10); 
  checkAndAlert(NO_ALERT,batteryChar ,34); 
 }
 
 TEST_CASE("check breach type") {
-  /* check if printf is called -yet to add */
+
    sendToEmail(TOO_LOW); 
    sendToEmail(NORMAL); 
    sendToEmail(TOO_HIGH); 
