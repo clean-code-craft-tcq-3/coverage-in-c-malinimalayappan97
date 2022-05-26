@@ -1,7 +1,7 @@
 #pragma once
 
 typedef enum {
-  PASSIVE_COOLING,
+  PASSIVE_COOLING = 0,
   HI_ACTIVE_COOLING,
   MED_ACTIVE_COOLING
 } CoolingType;
@@ -17,7 +17,8 @@ BreachType classifyTemperatureBreach(CoolingType coolingType, double temperature
 
 typedef enum {
   TO_CONTROLLER,
-  TO_EMAIL
+  TO_EMAIL,
+  NO_ALERT
 } AlertTarget;
 
 typedef struct {
